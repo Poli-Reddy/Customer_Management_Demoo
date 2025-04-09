@@ -42,18 +42,18 @@ public class CustomerManagementTest {
     @Test
     public void testPaymentAmount() {
         Payment payment = new Cash(200.0, 250.0);
-        assertEquals(20.0, payment.getAmount(), 0.01);
+        assertEquals(200.0, payment.getAmount(), 0.01);
     }
 
     @Test
     public void testCheckAuthorization() {
-        Check check = new Check(300.0, "John Doe", "123456");
+        Check check = new Check(300.0, "Poli Reddy", "123456");
         assertTrue(check.authorized());
     }
 
     @Test
     public void testCreditAuthorization() {
-        Credit credit = new Credit(500.0, "Jane Smith", "Visa", "12/25");
+        Credit credit = new Credit(500.0, "Krishna", "Visa", "12/25");
         assertTrue(credit.authorized());
     }
 }
